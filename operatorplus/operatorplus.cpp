@@ -12,6 +12,7 @@ private:
 public:
 	void setvalue(int ft,int in);
 	void display();
+	CFeet add(CFeet & objf);
 };
 void CFeet::setvalue(int ft, int in)
 {
@@ -22,12 +23,20 @@ void CFeet::display()
 {
 	cout << feet << "Ó¢³ß" << inches << "Ó¢´ç" << endl;
 }
+CFeet CFeet::add(CFeet & objf)
+{
+	CFeet temp;
+	temp.setvalue(feet + objf.feet, inches + objf.inches);
+	temp.display();
+	return temp;
+}
 
 int main()
 {
-	CFeet A;
-	A.setvalue(10, 18);
-	A.display();
+	CFeet A,B,C;
+	A.setvalue(10, 11);
+	B.setvalue(6,9);
+	C = A.add(B);
     return 0;
 }
 
