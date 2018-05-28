@@ -14,6 +14,7 @@ public:
 	void display();
 	CFeet add(CFeet & objf);
 	CFeet operator -(CFeet &objf);
+
 };
 void CFeet::setvalue(int ft, int in)
 {
@@ -42,8 +43,8 @@ CFeet CFeet::operator -(CFeet &objf)
 int main()
 {
 	CFeet A,B,C;
-	A.setvalue(10, 11);
-	B.setvalue(6,9);
+	A.setvalue(-10, -11);
+	B.setvalue(10,-11);
 	C = A - B;
 	C.display();
     return 0;
